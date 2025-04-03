@@ -3,13 +3,18 @@ import csv
 import json
 import matplotlib.pyplot as plt
 import pandas as pd
+import sys
 
+def main(input_file, output_file, graph_file):
+    print("--START--")
+    # Read the data from JSON file
+    eva_data = read_json_to_dataframe(input_file)
+    # Convert and export data to CSV file
+    write_dataframe_to_csv(eva_data, output_file)
+    plot_cumulative_time_in_space(eva_data,graph_file)
+    print("--END--")
 
 # https://data.nasa.gov/resource/eva.json (with modifications)
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv','w')
-graph_file = 'myplot.png'
-
 
 
 ## read in the data and clean it up ##
@@ -76,21 +81,18 @@ def plot_cumulative_time_in_space(df, graph_file):
 
 # Main code
 
-print("--START--")
+if __name__ =="__main__":
+    if len(sys.argv) < 3:
+        input_file = open('./data/eva-data.json')
+        output_file = open('./eva-data.csv')
+    else:
+        input_file = sys.argv[1]
+        output_file = sys.argv[2]
 
-input_file = open('./eva-data.json', 'r')
-output_file = open('./eva-data.csv', 'w')
-graph_file = './cumulative_eva_graph.png'
+graph_file = './results/cumulative_eva_graph.png'
+main(input_file, output_file, graph_file)
 
-# Read the data from JSON file
-eva_data = read_json_to_dataframe(input_file)
 
-# Convert and export data to CSV file
-write_dataframe_to_csv(eva_data, output_file)
-
-plot_cumulative_time_in_space(eva_data,graph_file)
-
-print("--END--")
 
 '''
 fieldnames = ("EVA #", "Country", "Crew    ", "Vehicle", "Date", "Duration", "Purpose")
