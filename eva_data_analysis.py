@@ -52,9 +52,9 @@ def write_dataframe_to_csv(df, output_file):
     # Save dataframe to CSV file for later analysis
     df.to_csv(output_file, index=False)
 
-def text_to_duration(duration):
+def text_to_duration(duration): #converts a text duration to a duration in hours?
     hours, minutes = duration.split(":")
-    duration_hours = int(hours) + int(minutes)/6
+    duration_hours = int(hours) + int(minutes)/60
     return duration_hours
 
 def add_duration_hours_varabile(df):
@@ -89,8 +89,8 @@ if __name__ =="__main__":
         input_file = sys.argv[1]
         output_file = sys.argv[2]
 
-graph_file = './results/cumulative_eva_graph.png'
-main(input_file, output_file, graph_file)
+    graph_file = './results/cumulative_eva_graph.png'
+    main(input_file, output_file, graph_file)
 
 
 
