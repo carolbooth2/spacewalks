@@ -26,9 +26,9 @@ def test_text_to_duration_integer():
 
 @pytest.mark.parametrize("input_value, expected_result", [
     ("Valen;",1),
-    ("one astronaut; another astronaut;",2)
+    ("one astronaut; another astronaut;",2),
 ])
-def test_calculate_crew_size_(input_value):
+def test_calculate_crew_size_(input_value, expected_result):
     actual_result = calculate_crew_size(input_value)
     assert actual_result == expected_result
 
