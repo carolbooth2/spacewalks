@@ -25,12 +25,12 @@ eva_df.sort_values('date', inplace=True)
 
 eva_df.to_csv(output_file, index=False)
 
-## create columns to plot
+## create columns to plot ##
 #create new column duration hours
 eva_df['duration_hours'] = eva_df['duration'].str.split(":").apply(lambda x: int(x[0]) + int(x[1])/60)
 eva_df['cumulative_time'] = eva_df['duration_hours'].cumsum()
 
-# plot date against cumulative time, save to file and show on screen
+## plot date against cumulative time, save to file and show on screen ##
 
 plt.plot(eva_df['date'], eva_df['cumulative_time'], 'ko-')
 plt.xlabel('Year')
