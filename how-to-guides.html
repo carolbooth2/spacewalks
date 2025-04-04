@@ -46,6 +46,8 @@
               </ul>
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href="#">How-To Guides</a>
+    <ul class="current">
+    </ul>
                 </li>
               </ul>
               <ul>
@@ -79,7 +81,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                
+                <h1 id="how-to-generate-a-graph-from-a-json-data-file">How to generate a graph from a JSON data file</h1>
+<ol>
+<li>copy the source data into the data directory
+    <code>cp myjson.json &lt;path-to-spacewalks&gt;/data/</code></li>
+<li>call the function
+    <code>python3 eva_data_analysis.py data/eva-data.json output.csv newgraph.png</code></li>
+<li>the output PNG will be saved in the results directory</li>
+</ol>
               
             </div>
           </div><footer>
