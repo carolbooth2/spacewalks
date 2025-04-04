@@ -10,6 +10,7 @@ def main(input_file, output_file, graph_file):
     print("--START--")
     # Read the data from JSON file
     eva_data = read_json_to_dataframe(input_file)
+    eva_data = add_crew_size_column(eva_data)
     # Convert and export data to CSV file
     write_dataframe_to_csv(eva_data, output_file)
     plot_cumulative_time_in_space(eva_data,graph_file)

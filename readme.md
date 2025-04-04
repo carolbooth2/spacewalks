@@ -1,5 +1,5 @@
 # Spacewalks
-
+ GPL-3.0-or-later 
 ## Overview
 Spacewalks is a Python analysis tool for researcher to generate visualisations and statistical summaries of NASA's extravehicular activity datasets
 
