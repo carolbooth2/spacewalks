@@ -1,0 +1,14 @@
+# This is a citation file
+cff-version: 1.2.0
+title: Spacewalks
+message: >-
+  If you use this software, please cite it using the metadata in this file.
+type: software
+authors:
+  - given-names: Colin
+    family-names: Sauze
+    email:
+    affiliation:
+    orcid:
+  - given-names: Carol Anne
+    family-names: Booth
