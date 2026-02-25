@@ -1,0 +1,21 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Spacewalks
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Carol
+    family-names: Booth
+    name-particle: Carol
+    email: carolboothnc@gmail.com
+  - given-names: Frances
+    family-names: Turner
+repository-code: 'https://github.com/carolbooth2/spacewalks'
+abstract: >-
+  Analysis code for NASA EVA data, developed as part of the
+  Better Research Software Carpentry
+license: MIT
