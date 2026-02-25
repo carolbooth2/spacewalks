@@ -11,7 +11,7 @@ Key features of Spacewalks:
 
 - Generates a line plot to show the cumulative duration of space walks over time
 
-## Pre-requisits
+## Pre-requisites
 Spacewalks was developed using Python 3.12
 
 To install and run Spacewalks you will need to have Python >=3.12 installed. You will also need the following libraries:
