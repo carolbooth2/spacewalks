@@ -6,6 +6,9 @@ input_file = open('./eva-data.json', 'r', encoding='ascii')
 output_file = open('./eva-data.csv', 'w', encoding='utf-8')
 graph_file = './cumulative_eva_graph.png'
 
+print("--START")
+print(f'Reading data from {input_file.name}')
+# Read the data from a JSON file, into a Pandas dataframe
 eva_df = pd.read_json(input_file, convert_dates=['date'], encoding='ascii')
 eva_df['eva'] = eva_df['eva'].astype(float)
 eva_df.dropna(axis=0, subset=['duration', 'date'], inplace=True)
